@@ -20,11 +20,21 @@
         </activity>
 
         <activity
+            android:name=".viewpager_bottom_nav.Viewpager2WithBottomNavigationActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.naim.androidviewpager2withnavigationcomponentexample.viewpager_bottom_nav.Viewpager2WithBottomNavigationActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
             android:name=".onlyviewpager2.OnlyViewpager2Activity"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.naim.androidviewpager2withnavigationcomponentexample.onlyviewpager2.OnlyViewpager2Activity" />
-                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

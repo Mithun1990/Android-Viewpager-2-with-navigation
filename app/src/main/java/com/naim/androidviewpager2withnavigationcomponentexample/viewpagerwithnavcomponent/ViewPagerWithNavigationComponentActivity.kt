@@ -2,6 +2,7 @@ package com.naim.androidviewpager2withnavigationcomponentexample.viewpagerwithna
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.navigation.NavigationBarView
 import com.naim.androidviewpager2withnavigationcomponentexample.R
 import com.naim.androidviewpager2withnavigationcomponentexample.adapter.ViewPager2Adapter
@@ -16,6 +17,7 @@ class ViewPagerWithNavigationComponentActivity : AppCompatActivity() {
         val adapter = ViewPager2Adapter(this)
         binding?.viewPager?.adapter = adapter
         binding?.bottomNavigation?.setOnItemSelectedListener(bottomNavigationController)
+        binding?.viewPager?.registerOnPageChangeCallback(pageChangeCallback)
     }
 
     private val bottomNavigationController = NavigationBarView.OnItemSelectedListener {
@@ -34,5 +36,22 @@ class ViewPagerWithNavigationComponentActivity : AppCompatActivity() {
             }
         }
         false
+    }
+
+    private val pageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+            super.onPageSelected(position)
+            when (position) {
+                0 -> {
+                    binding?.bottomNavigation?.menu?.findItem(R.id.navHome)?.isChecked = true
+                }
+                1 -> {
+                    binding?.bottomNavigation?.menu?.findItem(R.id.navDocument)?.isChecked = true
+                }
+                2 -> {
+                    binding?.bottomNavigation?.menu?.findItem(R.id.navProfile)?.isChecked = true
+                }
+            }
+        }
     }
 }

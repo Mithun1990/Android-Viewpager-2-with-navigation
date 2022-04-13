@@ -29,10 +29,29 @@
         </activity>
 
         <activity
+            android:name=".viewpagerwithnavcomponent.ViewPagerWithNavigationComponentActivity"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <action android:name="com.naim.androidviewpager2withnavigationcomponentexample.viewpagerwithnavcomponent.ViewPagerWithNavigationComponentActivity"></action>
+            </intent-filter>
+        </activity>
+
+
+        <activity
             android:name=".viewpagerwithtab.Viewpager2WithTabActivity"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.naim.androidviewpager2withnavigationcomponentexample.viewpagerwithtab.Viewpager2WithTabActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".onlynavcomponent.OnlyNavigationComponentActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.naim.androidviewpager2withnavigationcomponentexample.onlynavcomponent.OnlyNavigationComponentActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

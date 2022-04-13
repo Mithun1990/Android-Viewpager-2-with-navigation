@@ -12,6 +12,7 @@ import com.google.android.material.navigation.NavigationView
 import com.naim.androidviewpager2withnavigationcomponentexample.R
 import com.naim.androidviewpager2withnavigationcomponentexample.adapter.ViewPager2Adapter
 import com.naim.androidviewpager2withnavigationcomponentexample.databinding.ActivityViewpager2BottomNavBinding
+import java.text.SimpleDateFormat
 
 class Viewpager2WithBottomNavigationActivity : AppCompatActivity() {
     private var binding: ActivityViewpager2BottomNavBinding? = null
